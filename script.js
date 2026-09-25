@@ -6,7 +6,29 @@
   const EMAIL = "hamama.komal.00@gmail.com";
   const WHATSAPP = "923021976361";
 
-  document.documentElement.classList.add("js");
+  const root = document.documentElement;
+  root.classList.add("js");
+
+  // Light / dark switch. Follows the system until the visitor picks one, then remembers it.
+  const toggle = document.getElementById("theme-toggle");
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = () => root.dataset.theme || (systemDark.matches ? "dark" : "light");
+  const labelToggle = () => {
+    if (!toggle) return;
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    toggle.setAttribute("aria-label", `Switch to ${next} theme`);
+    toggle.title = `Switch to ${next} theme`;
+  };
+  if (toggle) {
+    labelToggle();
+    toggle.addEventListener("click", () => {
+      const next = currentTheme() === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try { localStorage.setItem("hk-theme", next); } catch (e) {}
+      labelToggle();
+    });
+    systemDark.addEventListener("change", labelToggle);
+  }
 
   // Gentle reveal as sections scroll in.
   const targets = document.querySelectorAll(
