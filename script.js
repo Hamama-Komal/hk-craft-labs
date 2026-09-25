@@ -8,9 +8,9 @@
 
   document.documentElement.classList.add("js");
 
-  // Gentle reveal for section content as it scrolls in.
+  // Gentle reveal as sections scroll in.
   const targets = document.querySelectorAll(
-    ".section__label, .prose, .case, .shipped li, .steps li, .faq, .brief, .ledger"
+    ".section__head, .story__head, .story__body, .lane, .topics li, .step, .promises li, .talk__intro, .brief"
   );
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -30,45 +30,55 @@
     });
   }
 
-  // The brief form composes a message and hands it to the visitor's email or WhatsApp.
   const form = document.getElementById("brief");
   if (!form) return;
 
+  const topicSelect = document.getElementById("topic");
+  const message = document.getElementById("message");
   const errorBox = document.getElementById("form-error");
-  let channel = "email";
 
+  // Topic buttons pick the topic, then take the visitor to the message box.
+  document.querySelectorAll(".topic[data-topic]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      topicSelect.value = btn.dataset.topic;
+      document.getElementById("talk").scrollIntoView({ behavior: "smooth", block: "start" });
+      const field = message.closest(".field");
+      field.classList.add("is-flash");
+      setTimeout(() => field.classList.remove("is-flash"), 1600);
+      setTimeout(() => message.focus({ preventScroll: true }), 450);
+    });
+  });
+
+  // The form composes a message and hands it to the visitor's WhatsApp or email.
+  let channel = "whatsapp";
   form.querySelectorAll("button[data-channel]").forEach((btn) => {
     btn.addEventListener("click", () => {
       channel = btn.dataset.channel;
     });
   });
 
-  function showError(message, field) {
-    errorBox.textContent = message;
+  function showError(text, field) {
+    errorBox.textContent = text;
     errorBox.hidden = false;
-    if (field) {
-      field.setAttribute("aria-invalid", "true");
-      field.focus();
-    }
+    field.setAttribute("aria-invalid", "true");
+    field.focus();
   }
 
   form.addEventListener("input", (event) => {
-    if (event.target.hasAttribute("aria-invalid")) event.target.removeAttribute("aria-invalid");
-    if (!errorBox.hidden) errorBox.hidden = true;
+    event.target.removeAttribute("aria-invalid");
+    errorBox.hidden = true;
   });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
-    const problem = (data.get("problem") || "").trim();
+    const topic = data.get("topic") || "Something else";
+    const text = (data.get("message") || "").trim();
     const name = (data.get("name") || "").trim();
-    const org = (data.get("org") || "").trim();
-    const stage = data.get("stage") || "";
-    const timeline = data.get("timeline") || "Not sure yet";
 
-    if (problem.length < 15) {
-      showError("Add a sentence or two about the problem so I have something to reply to.", form.elements.problem);
+    if (text.length < 10) {
+      showError("Add a line or two so I know what you'd like to talk about.", form.elements.message);
       return;
     }
     if (!name) {
@@ -76,23 +86,12 @@
       return;
     }
 
-    const lines = [
-      `Hi Hamama,`,
-      ``,
-      problem,
-      ``,
-      `Where I am: ${stage}`,
-      `Timeline: ${timeline}`,
-    ];
-    if (org) lines.push(`Company / project: ${org}`);
-    lines.push(``, `— ${name}`);
-    const body = lines.join("\n");
+    const body = [`Hi Hamama,`, ``, `Topic: ${topic}`, ``, text, ``, `— ${name}`].join("\n");
 
     if (channel === "whatsapp") {
-      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(body)}`;
-      window.open(url, "_blank", "noopener");
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(body)}`, "_blank", "noopener");
     } else {
-      const subject = `HK Craft Labs: ${stage}${org ? " — " + org : ""}`;
+      const subject = `HK Craft Labs: ${topic}`;
       window.location.href =
         `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }

@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HK Craft Labs — Flutter apps and AI tools, built by Hamama Komal</title>
-  <meta name="description" content="HK Craft Labs is the one-person studio of Hamama Komal, a Flutter developer and AI engineer with 9 apps on Google Play. Bring a problem or an idea — you talk directly to the person who builds it." />
-  <meta name="theme-color" content="#f2eee5" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <title>HK Craft Labs — apps and AI, made with care</title>
+  <meta name="description" content="HK Craft Labs is a new studio founded by Hamama Komal, a woman solo founder building Android apps and AI tools. Share an idea, ask a question, or just talk." />
+  <meta name="theme-color" content="#fff7ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#131a2b" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="HK Craft Labs — bring the problem, not the spec" />
-  <meta property="og:description" content="Flutter apps and practical AI tools, built by Hamama Komal. 9 apps shipped to Google Play." />
+  <meta property="og:title" content="HK Craft Labs — tell me the idea you keep thinking about" />
+  <meta property="og:description" content="A new studio for apps and AI, founded by Hamama Komal. Share an idea or just say hi." />
   <meta property="og:image" content="/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -26,16 +26,24 @@
   <header class="masthead">
     <div class="wrap masthead__row">
       <a class="brand" href="#top" aria-label="HK Craft Labs, back to top">
-        <span class="brand__mark" aria-hidden="true">HK</span>
-        <span class="brand__name">Craft Labs<span class="dot" aria-hidden="true"></span></span>
+        <span class="brand__mark" aria-hidden="true">hk</span>
+        <span class="brand__name">Craft Labs</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#help">What I fix</a>
-        <a href="#work">Shipped</a>
-        <a href="#process">How it goes</a>
-        <a href="https://hamama-komal.vercel.app/" target="_blank" rel="noopener">Portfolio <span aria-hidden="true">↗</span></a>
+        <a href="#story">My story</a>
+        <a href="#make">What I make</a>
+        <a href="#topics">Talk about</a>
+        <a href="#promise">Promises</a>
       </nav>
-      <a class="btn btn--small" href="#talk">Start a conversation</a>
+      <div class="masthead__social">
+        <a class="icon-link" href="https://www.instagram.com/hkcraftlabs" target="_blank" rel="noopener" aria-label="HK Craft Labs on Instagram" data-social="instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" class="fill"/></svg>
+        </a>
+        <a class="icon-link" href="https://www.tiktok.com/@hkcraftlabs" target="_blank" rel="noopener" aria-label="HK Craft Labs on TikTok" data-social="tiktok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg>
+        </a>
+        <a class="btn btn--small" href="#talk">Say hi</a>
+      </div>
     </div>
   </header>
 
@@ -44,336 +52,267 @@
     <section class="hero" id="top">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="kicker"><span class="dot" aria-hidden="true"></span> A one-person studio · Bhakkar, Pakistan · Working remotely</p>
-          <h1 class="display">Bring me the problem, <em>not the spec.</em></h1>
+          <p class="pill"><span class="pulse" aria-hidden="true"></span> Open for conversations</p>
+          <h1 class="display">
+            Tell me the idea you keep
+            <span class="scribble">thinking about.<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 60 4, 110 16, 160 8 S 250 5, 297 11"/></svg></span>
+          </h1>
           <p class="lede">
-            HK Craft Labs is where I, <strong>Hamama Komal</strong>, take on outside work: Android apps in Flutter
-            and AI tools that do something useful. You explain what's getting in your way, and I help you work out
-            what to build. If the answer is &ldquo;you don&rsquo;t need an app&rdquo;, I&rsquo;ll say that too.
+            I'm <strong>Hamama Komal</strong>, and HK Craft Labs is the studio I'm building on my own. I make
+            Android apps and AI tools. Before any of that, I listen. Bring an idea, a problem at work, or a
+            question you've been too shy to ask anyone.
           </p>
           <div class="hero__actions">
-            <a class="btn" href="#talk">Describe your problem</a>
-            <a class="link-arrow" href="#work">See what I've shipped</a>
+            <a class="btn btn--coral" href="#talk">Share your idea</a>
+            <a class="btn btn--ghost" href="#topics">Or just talk</a>
           </div>
         </div>
 
-        <aside class="ledger" aria-label="Facts you can check">
-          <p class="ledger__head">Things you can check</p>
-          <dl>
-            <div><dt>Apps live on Google Play</dt><dd>9</dd></div>
-            <div><dt>Day job</dt><dd>Flutter developer, Devlix Technologies</dd></div>
-            <div><dt>Also</dt><dd>AI engineer &amp; AI/ML instructor, XOKSIS</dd></div>
-            <div><dt>Building since</dt><dd>2024, native Android first</dd></div>
-            <div><dt>Who writes your code</dt><dd>Me. No hand-offs.</dd></div>
-          </dl>
-          <p class="ledger__foot">
-            <a href="https://www.linkedin.com/in/hamama-komal" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/Hamama-Komal" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://hamama-komal.vercel.app/Hamama-Komal-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-          </p>
+        <aside class="founder-card" aria-label="About the founder">
+          <span class="sticker">solo founder</span>
+          <div class="founder-card__top">
+            <span class="avatar" aria-hidden="true">HK</span>
+            <div>
+              <p class="founder-card__name">Hamama Komal</p>
+              <p class="founder-card__role">Founder, HK Craft Labs</p>
+            </div>
+          </div>
+          <ul class="founder-card__facts">
+            <li><span>Builds</span>Flutter apps · AI tools</li>
+            <li><span>Based in</span>Bhakkar, Pakistan</li>
+            <li><span>Works with</span>anyone, anywhere, online</li>
+            <li><span>Replies</span>personally, every time</li>
+          </ul>
+          <p class="founder-card__note">"No sales team. When you write, I'm the one who reads it."</p>
         </aside>
       </div>
     </section>
 
-    <!-- WHO -->
-    <section class="section" id="who">
-      <div class="wrap split">
-        <header class="section__label">
-          <span class="num">01</span>
-          <h2>Who you'll be talking to</h2>
-        </header>
-        <div class="prose">
-          <p class="big">
-            When you write to HK Craft Labs, the reply comes from the person who will write your code.
+    <!-- STORY -->
+    <section class="section" id="story">
+      <div class="wrap story">
+        <div class="story__head">
+          <p class="eyebrow">Why this exists</p>
+          <h2>I kept meeting people with good ideas and no one to ask.</h2>
+        </div>
+        <div class="story__body">
+          <p>
+            For the last two years I've been building Android apps in Flutter and working with AI: language
+            models, chatbots that answer from your own documents, tools that take the boring parts of a job away.
+            I've shipped nine apps to Google Play.
           </p>
           <p>
-            I started in native Android with Java at a software house internship, then moved to Flutter and
-            shipped five apps in six months on a contract. I now build Flutter apps full-time, and two evenings a
-            week I teach LLM fundamentals and RAG pipelines to students.
+            Along the way I noticed that almost everyone has an idea like this: an app for their shop, a quiz
+            for their class, a way to stop drowning in messages. Most of those ideas never go anywhere, because
+            people don't know where to start or who to trust with them.
           </p>
           <p>
-            Most of my apps were built alone, from requirement to Play Console. So I set up the structure at the
-            start and keep to it. The app has to make sense to whoever opens it next, and that is usually me, six
-            months later, with a crash report and no memory of why I did anything.
+            So I started HK Craft Labs. It's small on purpose. I'm a woman building this from a small city, on my
+            own terms, and I want it to be a place where anyone feels comfortable walking in with a half-formed
+            idea, whatever their background.
           </p>
-          <p class="sig">
-            <span>Hamama Komal</span>
-            <a class="link-arrow" href="https://hamama-komal.vercel.app/" target="_blank" rel="noopener">Full portfolio and experience</a>
-          </p>
+          <p class="handwritten">— Hamama</p>
         </div>
       </div>
     </section>
 
-    <!-- HELP -->
-    <section class="section" id="help">
-      <div class="wrap split">
-        <header class="section__label">
-          <span class="num">02</span>
-          <h2>What people usually come with</h2>
-          <p class="section__note">Four situations. Yours probably sounds like one of them. If it doesn't, write anyway.</p>
-        </header>
-        <ol class="cases">
-          <li class="case">
-            <p class="case__quote">&ldquo;I have an idea, but there's no app yet.&rdquo;</p>
-            <p class="case__body">
-              We cut the idea down to the smallest version that proves it, and I build that as a real Android app
-              in Flutter. It goes out through the Play Console under your account, so the listing is yours.
-            </p>
-            <p class="tags">Flutter · Firebase · Play Store release</p>
+    <!-- MAKE -->
+    <section class="section section--tint" id="make">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">What I make</p>
+          <h2>Two crafts, one studio.</h2>
+          <p class="section__note">Apps and AI fit well together. Most of the useful ideas I hear need a bit of both.</p>
+        </div>
+
+        <div class="lanes">
+          <article class="lane lane--mint">
+            <p class="lane__tag">Apps</p>
+            <h3>Android apps, from idea to Play Store</h3>
+            <ul>
+              <li>A first version of your idea, small enough to test quickly</li>
+              <li>Apps for your shop, class, clinic or community</li>
+              <li>Fixing an app that crashes, lags or nobody can maintain</li>
+              <li>Publishing on Google Play under your own name</li>
+            </ul>
+            <p class="lane__stack">Flutter · Dart · Firebase</p>
+          </article>
+
+          <article class="lane lane--lilac">
+            <p class="lane__tag">AI</p>
+            <h3>AI that does a real job</h3>
+            <ul>
+              <li>A chatbot that answers from your own documents or FAQs</li>
+              <li>Writing, grammar and translation helpers</li>
+              <li>Automating the repetitive parts of your work</li>
+              <li>AI features inside an app, like smart search or suggestions</li>
+            </ul>
+            <p class="lane__stack">LLMs · RAG · Python · FastAPI</p>
+          </article>
+
+          <article class="lane lane--sun">
+            <p class="lane__tag">Talk</p>
+            <h3>Advice, before you spend anything</h3>
+            <ul>
+              <li>Is my idea worth building?</li>
+              <li>Do I need an app, a website, or neither?</li>
+              <li>Can AI actually help with this?</li>
+              <li>Where do I start learning?</li>
+            </ul>
+            <p class="lane__stack">Free · No obligation</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="section" id="topics">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Talk about anything</p>
+          <h2>Not sure how to start? Pick one.</h2>
+          <p class="section__note">Tap a topic and it'll be ready in the message box below. You only need to add a line or two.</p>
+        </div>
+
+        <ul class="topics" role="list">
+          <li><button type="button" class="topic topic--coral" data-topic="I have an app idea">I have an app idea<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--mint" data-topic="Can AI help my business?">Can AI help my business?<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--sun" data-topic="Is my idea worth building?">Is my idea worth building?<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--lilac" data-topic="My app needs fixing">My app needs fixing<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--sky" data-topic="I want to learn Flutter or AI">I want to learn Flutter or AI<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--coral" data-topic="Women in tech: let's connect">Women in tech: let's connect<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--mint" data-topic="Collaboration">Let's work on something together<span aria-hidden="true">→</span></button></li>
+          <li><button type="button" class="topic topic--plain" data-topic="Something else">Something else entirely<span aria-hidden="true">→</span></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section section--tint" id="how">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">How it goes</p>
+          <h2>Three steps, and the first two are free.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <h3>You say hello</h3>
+            <p>A message, a DM, a voice note on WhatsApp, whatever's easiest. A rough idea is plenty.</p>
           </li>
-          <li class="case">
-            <p class="case__quote">&ldquo;Our app works. Mostly.&rdquo;</p>
-            <p class="case__body">
-              Crashes you can't reproduce, screens that stutter on cheaper phones, a codebase nobody wants to touch.
-              I read it first and write down what's wrong, then fix it in an order that keeps the app shipping.
-            </p>
-            <p class="tags">Audits · Clean Architecture · Performance</p>
+          <li class="step">
+            <span class="step__n">2</span>
+            <h3>We talk it through</h3>
+            <p>I ask questions and give honest answers, including "you don't need an app for this" when it's true.</p>
           </li>
-          <li class="case">
-            <p class="case__quote">&ldquo;We want AI in it, but something actually useful.&rdquo;</p>
-            <p class="case__body">
-              Writing and grammar assistance, answers drawn from your own documents (RAG), or an LLM that handles
-              a repetitive step in your workflow. I'll also tell you where a plain rule would do the job better
-              than a model.
-            </p>
-            <p class="tags">LLMs · RAG · Python · FastAPI</p>
-          </li>
-          <li class="case">
-            <p class="case__quote">&ldquo;I just need someone to think it through with.&rdquo;</p>
-            <p class="case__body">
-              Before you spend money, a half-hour call to test the idea: who it's for, what the first version
-              needs, what can wait, and roughly what it takes. No obligation to hire me afterwards.
-            </p>
-            <p class="tags">Free first call · Honest scoping</p>
+          <li class="step">
+            <span class="step__n">3</span>
+            <h3>If you want, we build</h3>
+            <p>A clear written plan with scope, timeline and price first. Then builds you can try on your own phone as we go.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <header class="section__label section__label--wide">
-          <span class="num">03</span>
-          <h2>Shipped, and still live</h2>
-          <p class="section__note">Every one of these is on Google Play right now. Tap one and check it yourself.</p>
-        </header>
-
-        <ul class="shipped">
+    <!-- PROMISES -->
+    <section class="section" id="promise">
+      <div class="wrap promise">
+        <div class="section__head">
+          <p class="eyebrow">My promises</p>
+          <h2>What you can count on.</h2>
+        </div>
+        <ul class="promises">
           <li>
-            <a href="https://play.google.com/store/apps/details?id=com.photovault.photolocker.hidephotos.hidevideos.privatevault.gallerylock" target="_blank" rel="noopener">
-              <span class="shipped__name">Hide Photos &amp; Videos</span>
-              <span class="shipped__what">Private on-device vault. Files stay intact, and nothing gets uploaded.</span>
-              <span class="shipped__stack">Flutter · Local storage</span>
-            </a>
+            <h3>You'll hear back from me</h3>
+            <p>Every message is read and answered by me personally, not a bot or an assistant.</p>
           </li>
           <li>
-            <a href="https://play.google.com/store/apps/details?id=com.voicechanger.voiceeffects.audioeffects.appqubit" target="_blank" rel="noopener">
-              <span class="shipped__name">Voice Changer</span>
-              <span class="shipped__what">Record, apply an effect and play it back. Everything runs on the phone, even offline.</span>
-              <span class="shipped__stack">Flutter · Audio processing</span>
-            </a>
+            <h3>Your idea stays yours</h3>
+            <p>I won't share or reuse what you tell me. Happy to sign an NDA before you go into details.</p>
           </li>
           <li>
-            <a href="https://play.google.com/store/apps/details?id=com.football.wallpapers.ronaldo.messi.neymar.appqubit" target="_blank" rel="noopener">
-              <span class="shipped__name">Football Wallpapers</span>
-              <span class="shipped__what">Light previews keep scrolling smooth. Full resolution loads only when you apply one.</span>
-              <span class="shipped__stack">Flutter · Image caching</span>
-            </a>
+            <h3>No pressure, ever</h3>
+            <p>Talking to me doesn't commit you to anything. Plenty of good conversations end with advice and nothing else.</p>
           </li>
           <li>
-            <a href="https://play.google.com/store/apps/details?id=com.appqubit.independenceday.photoeditor" target="_blank" rel="noopener">
-              <span class="shipped__name">14 August Photo Editor</span>
-              <span class="shipped__what">Pick a photo, pick a frame, export. Three taps.</span>
-              <span class="shipped__stack">Flutter · Image editing</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.ai.grammar.checker.learnenglishgrammar.english" target="_blank" rel="noopener">
-              <span class="shipped__name">AI Grammar Checker</span>
-              <span class="shipped__what">A writing assistant that corrects grammar and suggests improvements.</span>
-              <span class="shipped__stack">Flutter · REST APIs · AI</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.voicenotescreator.notepadapp" target="_blank" rel="noopener">
-              <span class="shipped__name">Voice Notes</span>
-              <span class="shipped__what">Voice diary and memo recorder, stored on the device.</span>
-              <span class="shipped__stack">Flutter · Audio</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.ct.tatussaver.videodownloader.statusdownloader" target="_blank" rel="noopener">
-              <span class="shipped__name">Status Saver</span>
-              <span class="shipped__what">Saves and organises status media.</span>
-              <span class="shipped__stack">Flutter · File I/O</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.land.area.landareacalculator.gps" target="_blank" rel="noopener">
-              <span class="shipped__name">GPS Land Area Calculator</span>
-              <span class="shipped__what">Measure land area by walking it with GPS or drawing it on the map.</span>
-              <span class="shipped__stack">Flutter · Google Maps</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store/apps/details?id=com.appqubit.independenceday.frames.wallpapers" target="_blank" rel="noopener">
-              <span class="shipped__name">15 August Tiranga Frames</span>
-              <span class="shipped__what">Themed frames and wallpapers for Independence Day.</span>
-              <span class="shipped__stack">Flutter · Image editing</span>
-            </a>
+            <h3>You own what we build</h3>
+            <p>The code, the app listing and the accounts are in your name by the end of the project.</p>
           </li>
         </ul>
-        <p class="aside-note">
-          I built these while working with the companies on my portfolio, so the Play listings carry their developer names.
-          The <a href="https://hamama-komal.vercel.app/#work" target="_blank" rel="noopener">portfolio</a> has the longer write-ups.
-        </p>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <div class="wrap split">
-        <header class="section__label">
-          <span class="num">04</span>
-          <h2>How a conversation turns into a project</h2>
-          <p class="section__note">You can stop after any step. Steps one to three cost nothing.</p>
-        </header>
-        <ol class="steps">
-          <li>
-            <span class="steps__n">1</span>
-            <div>
-              <h3>You write a few lines</h3>
-              <p>What's wrong, or what you want to exist. A rough paragraph is enough, and you don't need technical words.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">2</span>
-            <div>
-              <h3>I reply with questions</h3>
-              <p>Within two working days. Usually three or four questions that change what should be built.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">3</span>
-            <div>
-              <h3>A call, if it helps</h3>
-              <p>Thirty minutes on a call or WhatsApp. We agree on the smallest useful version, and on what can wait.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">4</span>
-            <div>
-              <h3>A written plan</h3>
-              <p>Scope, milestones, timeline and price, in writing, before any work starts. Nothing gets added later without asking you.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">5</span>
-            <div>
-              <h3>Builds you can install</h3>
-              <p>A new build on your phone at every milestone, so you're judging the real app and not a status report.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="wrap split">
-        <header class="section__label">
-          <span class="num">05</span>
-          <h2>Straight answers</h2>
-        </header>
-        <div class="faq">
-          <details>
-            <summary>Is it really just you?</summary>
-            <p>Yes. That's the point of the studio: the person you explain the problem to is the person who solves it. It also means I take on only a few projects at once, and I'll tell you honestly if I don't have room.</p>
-          </details>
-          <details>
-            <summary>Who owns the code and the app?</summary>
-            <p>You do. The source code, the Play Console listing and any accounts we set up are in your name by the end of the project.</p>
-          </details>
-          <details>
-            <summary>Can I share my idea safely?</summary>
-            <p>Yes. I'm happy to sign an NDA before you go into details. Until then, you can describe the idea in general terms.</p>
-          </details>
-          <details>
-            <summary>What does it cost?</summary>
-            <p>It depends on scope, which is why the price comes in the written plan and not before. A small fix and a new app are different jobs. If your budget is tight, say so early and we'll shape the first version around it.</p>
-          </details>
-          <details>
-            <summary>Do you build for iOS?</summary>
-            <p>Flutter builds for both, but Android and Google Play are where I've shipped. If you need an iOS release, we'll talk about it plainly at the start, not partway through the project.</p>
-          </details>
-          <details>
-            <summary>What if I only want advice?</summary>
-            <p>That's fine. A lot of good projects start with a conversation that ends in &ldquo;don&rsquo;t build that yet&rdquo;. Write in and ask.</p>
-          </details>
-        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section section--talk" id="talk">
-      <div class="wrap split">
-        <header class="section__label">
-          <span class="num">06</span>
-          <h2>Tell me what you're working on</h2>
-          <p class="section__note">
-            Fill this in and it opens as a ready-to-send email or WhatsApp message. Nothing is stored on this site.
+      <div class="wrap talk">
+        <div class="talk__intro">
+          <p class="eyebrow eyebrow--light">Say hi</p>
+          <h2>What's on your mind?</h2>
+          <p>
+            Write it the way you'd say it out loud. The message opens in your email or WhatsApp, ready to send.
+            Nothing is stored on this site.
           </p>
-          <ul class="direct">
-            <li><span>Email</span><a href="mailto:hamama.komal.00@gmail.com">hamama.komal.00@gmail.com</a></li>
-            <li><span>WhatsApp / phone</span><a href="https://wa.me/923021976361" target="_blank" rel="noopener">+92 302 1976361</a></li>
-            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/hamama-komal" target="_blank" rel="noopener">hamama-komal</a></li>
+
+          <ul class="channels">
+            <li>
+              <a href="https://www.instagram.com/hkcraftlabs" target="_blank" rel="noopener" data-social="instagram">
+                <span class="channels__label">Instagram</span>
+                <span class="channels__value" data-social-handle="instagram">@hkcraftlabs</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@hkcraftlabs" target="_blank" rel="noopener" data-social="tiktok">
+                <span class="channels__label">TikTok</span>
+                <span class="channels__value" data-social-handle="tiktok">@hkcraftlabs</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/923021976361" target="_blank" rel="noopener">
+                <span class="channels__label">WhatsApp</span>
+                <span class="channels__value">+92 302 1976361</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hamama.komal.00@gmail.com">
+                <span class="channels__label">Email</span>
+                <span class="channels__value">hamama.komal.00@gmail.com</span>
+              </a>
+            </li>
           </ul>
-        </header>
+        </div>
 
         <form class="brief" id="brief" novalidate>
-          <fieldset class="chips">
-            <legend>Where are you right now?</legend>
-            <label><input type="radio" name="stage" value="I have an idea, no app yet" checked /><span>An idea, no app yet</span></label>
-            <label><input type="radio" name="stage" value="I have an app that needs work" /><span>An app that needs work</span></label>
-            <label><input type="radio" name="stage" value="I want to add AI to something" /><span>Adding AI to something</span></label>
-            <label><input type="radio" name="stage" value="I want to talk an idea through" /><span>Just want to talk it through</span></label>
-          </fieldset>
-
           <label class="field">
-            <span class="field__label">What's the problem, or the idea?</span>
-            <textarea name="problem" rows="6" required placeholder="e.g. Our delivery riders track orders on paper and we lose about a third of them by evening. I'd like something simple on their phones."></textarea>
-            <span class="field__hint">Plain words are fine. Who has the problem, and what happens today because of it?</span>
+            <span class="field__label">What's it about?</span>
+            <select name="topic" id="topic">
+              <option>I have an app idea</option>
+              <option>Can AI help my business?</option>
+              <option>Is my idea worth building?</option>
+              <option>My app needs fixing</option>
+              <option>I want to learn Flutter or AI</option>
+              <option>Women in tech: let's connect</option>
+              <option>Collaboration</option>
+              <option>Something else</option>
+            </select>
           </label>
 
-          <div class="field-row">
-            <label class="field">
-              <span class="field__label">Your name</span>
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label class="field">
-              <span class="field__label">How soon? <em>(optional)</em></span>
-              <select name="timeline">
-                <option value="">Not sure yet</option>
-                <option>This month</option>
-                <option>In the next 2–3 months</option>
-                <option>No fixed date</option>
-              </select>
-            </label>
-          </div>
+          <label class="field">
+            <span class="field__label">Tell me about it</span>
+            <textarea name="message" id="message" rows="6" required placeholder="e.g. I run a small bakery and take orders on WhatsApp. They get lost when it's busy. Could a simple app help?"></textarea>
+          </label>
 
           <label class="field">
-            <span class="field__label">Company or project <em>(optional)</em></span>
-            <input type="text" name="org" autocomplete="organization" />
+            <span class="field__label">Your name</span>
+            <input type="text" name="name" autocomplete="name" required />
           </label>
 
           <p class="form-error" id="form-error" role="alert" hidden></p>
 
           <div class="brief__send">
-            <button class="btn" type="submit" data-channel="email">Send by email</button>
-            <button class="btn btn--ghost" type="submit" data-channel="whatsapp">Send on WhatsApp</button>
+            <button class="btn btn--coral" type="submit" data-channel="whatsapp">Send on WhatsApp</button>
+            <button class="btn btn--ghost" type="submit" data-channel="email">Send by email</button>
           </div>
-          <p class="field__hint">Your email or WhatsApp opens with the message filled in. Read it over and press send.</p>
+          <p class="brief__hint">It opens with your message filled in. Check it over, then press send.</p>
         </form>
       </div>
     </section>
@@ -381,12 +320,12 @@
 
   <footer class="footer">
     <div class="wrap footer__row">
-      <p><span class="brand__name">HK Craft Labs<span class="dot" aria-hidden="true"></span></span> Flutter apps and AI tools, by Hamama Komal.</p>
+      <p class="footer__brand"><span class="brand__mark" aria-hidden="true">hk</span> HK Craft Labs · founded by Hamama Komal</p>
       <p class="footer__links">
-        <a href="https://hamama-komal.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
-        <a href="https://github.com/Hamama-Komal" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/hamama-komal" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#top">Top</a>
+        <a href="https://www.instagram.com/hkcraftlabs" target="_blank" rel="noopener" data-social="instagram">Instagram</a>
+        <a href="https://www.tiktok.com/@hkcraftlabs" target="_blank" rel="noopener" data-social="tiktok">TikTok</a>
+        <a href="https://wa.me/923021976361" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hamama.komal.00@gmail.com">Email</a>
       </p>
     </div>
   </footer>
